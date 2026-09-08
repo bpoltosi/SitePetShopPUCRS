@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const campoBusca = document.getElementById("busca-produto");
   const cards = document.querySelectorAll(".produto-card");
 
-  // Guarda o filtro de categoria selecionado no momento, para poder
-  // combiná-lo com o texto digitado na busca sem precisar reler o DOM.
+  // Guarda o filtro de categoria selecionado no momento, para poder combiná-lo com o texto digitado na busca sem precisar reler o DOM.
   let categoriaAtiva = "todos";
 
   function aplicarFiltros() {
@@ -15,23 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach((card) => {
       const categoriaDoCard = card.closest("section.categoria").id;
-      const nomeDoProduto = card.querySelector(".card-title").textContent.toLowerCase();
+      const nomeDoProduto = card
+        .querySelector(".card-title")
+        .textContent.toLowerCase();
 
-      const combinaCategoria = categoriaAtiva === "todos" || categoriaDoCard === categoriaAtiva;
+      const combinaCategoria =
+        categoriaAtiva === "todos" || categoriaDoCard === categoriaAtiva;
       const combinaBusca = nomeDoProduto.includes(termoBusca);
 
-      card.classList.toggle("produto-oculto", !(combinaCategoria && combinaBusca));
+      card.classList.toggle(
+        "produto-oculto",
+        !(combinaCategoria && combinaBusca),
+      );
     });
 
     atualizarVisibilidadeDasSecoes();
   }
 
-  // Quando um filtro de categoria some com todos os produtos visíveis
-  // (por causa da busca), esconde o título da seção também, para não
-  // deixar um cabeçalho "Acessórios" sem nenhum card embaixo.
+  // Quando um filtro de categoria some com todos os produtos visíveis (por causa da busca), esconde o título da seção também, para não deixar um cabeçalho "Acessórios" sem nenhum card embaixo.
   function atualizarVisibilidadeDasSecoes() {
     document.querySelectorAll("section.categoria").forEach((secao) => {
-      const temCardVisivel = secao.querySelector(".produto-card:not(.produto-oculto)");
+      const temCardVisivel = secao.querySelector(
+        ".produto-card:not(.produto-oculto)",
+      );
       secao.classList.toggle("d-none", !temCardVisivel);
     });
   }

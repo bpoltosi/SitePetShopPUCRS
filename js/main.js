@@ -2,11 +2,8 @@
 // Carregado em index.html, produtos.html, servicos.html e contato.html.
 "use strict";
 
-/**
- * Marca o link de navegação correspondente à página atual como ativo,
- * tanto visualmente (classe "active") quanto para leitores de tela
- * (aria-current="page"). Evita repetir essa marcação manualmente em
- * cada arquivo HTML.
+/* Marca o link de navegação correspondente à página atual como ativo, tanto visualmente (classe "active")
+quanto para leitores de tela (aria-current="page"). Evita repetir essa marcação manualmente em cada arquivo HTML.
  */
 function marcarLinkAtivo() {
   const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
@@ -19,10 +16,7 @@ function marcarLinkAtivo() {
   });
 }
 
-/**
- * Atualiza o ano exibido no rodapé automaticamente, para que o texto
- * de direitos autorais nunca fique desatualizado.
- */
+/* Atualiza o ano exibido no rodapé automaticamente, para que o texto de direitos autorais nunca fique desatualizado. */
 function atualizarAnoRodape() {
   const spanAno = document.getElementById("ano-atual");
   if (spanAno) {
@@ -30,11 +24,8 @@ function atualizarAnoRodape() {
   }
 }
 
-/**
- * Exibe uma saudação de acordo com o horário do dispositivo do
- * visitante (bom dia / boa tarde / boa noite). Só executa se o
- * elemento existir na página (isto é, na página inicial).
- */
+/* Exibe uma saudação de acordo com o horário do dispositivo do visitante (bom dia / boa tarde / boa noite).
+Só executa se o elemento existir na página (página inicial). */
 function exibirSaudacaoDinamica() {
   const elementoSaudacao = document.getElementById("saudacao-dinamica");
   if (!elementoSaudacao) return;

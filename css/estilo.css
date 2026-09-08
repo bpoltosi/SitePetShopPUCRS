@@ -1,13 +1,4 @@
-/*
-  estilo.css — Petshop Amigo Fiel (Fase 2)
-  ------------------------------------------------
-  Camada de identidade visual sobre o Bootstrap 5.
-  As variáveis abaixo concentram a paleta e a tipografia da marca:
-  qualquer ajuste de cor/fonte deve ser feito aqui, nunca em inline styles.
-*/
-
 :root {
-  /* Paleta: verde-pinheiro (confiança) + mostarda (calor/energia) */
   --cor-primaria: #2f4a3e;
   --cor-primaria-escura: #1e3129;
   --cor-primaria-clara: #4c6f5c;
@@ -19,7 +10,6 @@
   --cor-texto-suave: #6b6459;
   --cor-borda: #e1d8c4;
 
-  /* Acentos por categoria de produto (usados nas bordas dos cards) */
   --cor-acessorios: var(--cor-destaque);
   --cor-racao: var(--cor-primaria-clara);
   --cor-higiene: #6e8fa6;
@@ -48,16 +38,13 @@ a {
   color: var(--cor-primaria);
 }
 
-/* Indicador de foco visível e consistente em toda a aplicação
-   (elementos interativos nunca devem perder o contorno de foco) */
+/* Indicador de foco visível e consistente em toda a aplicação; */
 :where(a, button, input, select, textarea, .btn):focus-visible {
   outline: 3px solid var(--cor-destaque-escura);
   outline-offset: 2px;
 }
 
-/* ===== Link de pular para o conteúdo ("skip link") =====
-   Usa a utilitária .visually-hidden-focusable do próprio Bootstrap;
-   aqui só definimos a aparência de quando ele recebe foco. */
+/* Link de pular para o conteúdo ("skip link"). Usa a utilitária .visually-hidden-focusable do próprio Bootstrap; só definimos a aparência de quando ele recebe foco. */
 .skip-link:focus {
   z-index: 1080;
   padding: 0.6rem 1.2rem;
@@ -68,7 +55,7 @@ a {
   text-decoration: none;
 }
 
-/* ===== Cabeçalho / navegação ===== */
+/* Cabeçalho / navegação */
 .navbar-petshop {
   background-color: var(--cor-primaria);
 }
@@ -94,13 +81,13 @@ a {
   color: var(--cor-destaque);
 }
 
-/* Sublinhado sutil no item ativo, além da cor — reforço não-visual-only */
+/* Sublinhado sutil no item ativo, além da cor. */
 .navbar-petshop .nav-link.active {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
-/* ===== Hero (página inicial) ===== */
+/* Hero (página inicial) */
 .hero {
   padding-block: 1.5rem 2rem;
 }
@@ -118,7 +105,7 @@ a {
   font-weight: 700;
 }
 
-/* ===== Carrossel de destaques ===== */
+/* Carrossel de destaques */
 #carrossel-banners {
   border-radius: 1rem;
   overflow: hidden;
@@ -132,14 +119,13 @@ a {
   bottom: 1.25rem;
 }
 
-/* Recolore os indicadores/controles do Bootstrap via suas próprias
-   variáveis, em vez de sobrescrever regras inteiras. */
+/* Recolore os indicadores/controles do Bootstrap via suas próprias variáveis, em vez de sobrescrever regras inteiras. */
 #carrossel-banners {
   --bs-carousel-indicator-active-bg: var(--cor-destaque);
   --bs-carousel-control-color: var(--cor-fundo);
 }
 
-/* ===== Cards de produtos e serviços ===== */
+/* Cards de produtos e serviços */
 .produto-card,
 .servico-card {
   border: 1px solid var(--cor-borda);
@@ -212,7 +198,7 @@ a {
   color: #fff;
 }
 
-/* ===== Filtro de produtos ===== */
+/* Filtro de produtos */
 .filtro-produtos {
   background-color: var(--cor-fundo-alt);
   border-radius: 0.9rem;
@@ -233,7 +219,7 @@ a {
   font-weight: 600;
 }
 
-/* ===== Formulário de cadastro / agendamento ===== */
+/* Formulário de cadastro / agendamento */
 fieldset.grupo-formulario {
   border: 1px solid var(--cor-borda);
   border-radius: 0.9rem;
@@ -275,7 +261,7 @@ fieldset.grupo-formulario legend {
   border-radius: 0.9rem;
 }
 
-/* ===== Status de funcionamento (página Contato) ===== */
+/* Status de funcionamento (página Contato) */
 .status-funcionamento {
   display: inline-block;
   font-weight: 700;
@@ -296,7 +282,7 @@ fieldset.grupo-formulario legend {
   border: 1px solid #7a2323;
 }
 
-/* ===== Rodapé ===== */
+/* Rodapé */
 footer {
   background-color: var(--cor-primaria-escura);
   color: rgba(251, 246, 236, 0.85);
@@ -317,8 +303,7 @@ footer .footer-nav {
   margin-top: 0.75rem;
 }
 
-/* Respeita quem prefere menos movimento (o carrossel só gira sozinho
-   quando a pessoa não pediu para reduzir animações) */
+/* Respeita quem prefere menos movimento (o carrossel só gira sozinho quando a pessoa não pediu para reduzir animações) */
 @media (prefers-reduced-motion: reduce) {
   .produto-card:hover,
   .servico-card:hover {
