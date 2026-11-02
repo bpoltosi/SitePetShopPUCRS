@@ -1,52 +1,48 @@
-# Site PetShop — PUCRS
+# PetShop Amigo Fiel — Projeto PUCRS
 
-Projeto acadêmico desenvolvido para praticar **desenvolvimento Web**, reunindo HTML, CSS e JavaScript em um site de pet shop.
+Site estático desenvolvido como atividade acadêmica para praticar **desenvolvimento front-end** e a construção de uma experiência web para um pet shop fictício.
 
-## 🐾 Sobre o projeto
-O **Petshop Amigo Fiel** é uma aplicação web estática criada para exercitar conceitos de desenvolvimento de interfaces e organização de páginas.
+## Páginas e recursos
 
-O site apresenta:
-- Página inicial
-- Catálogo de produtos
-- Serviços
-- Página de contato
-- Formulários e interação com JavaScript
-- Navegação entre páginas
-- Recursos de acessibilidade e semântica HTML
+- Página inicial com banners e apresentação do estabelecimento.
+- Catálogo de produtos.
+- Página de serviços, incluindo banho e tosa.
+- Página de contato.
+- Formulários e interações de agendamento com JavaScript.
+- Arquivos de estilo, scripts e imagens organizados em diretórios próprios.
 
-## 🛠️ Tecnologias
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap
+## Tecnologias
 
-## 📁 Estrutura
+- HTML5 para estrutura e conteúdo.
+- CSS3 para apresentação.
+- JavaScript para interações no navegador.
 
-    .
-    ├── index.html
-    ├── produtos.html
-    ├── servicos.html
-    ├── contato.html
-    ├── css/
-    └── js/
-        ├── main.js
-        └── agendamento.js
+## Estrutura
 
-## ▶️ Como executar
-Por ser um projeto web estático, basta clonar o repositório e abrir o arquivo `index.html` em um navegador.
+```text
+.
+├── index.html
+├── produtos.html
+├── servicos.html
+├── contato.html
+├── css/
+│   └── estilo.css
+├── js/
+│   ├── agendamento.js
+│   ├── horario.js
+│   ├── main.js
+│   └── produtos.js
+└── images/
+    ├── banner/
+    ├── layout/
+    ├── produtos/
+    └── servicos/
+```
 
-Também é possível utilizar uma extensão como **Live Server** no VS Code durante o desenvolvimento.
+## Executar localmente
 
-## 🎓 Objetivos acadêmicos
-- Estrutura semântica de páginas
-- Responsividade
-- Organização de arquivos
-- JavaScript no navegador
-- Manipulação do DOM
-- Formulários
-- Acessibilidade
+Clone o repositório e abra `index.html` no navegador. Para desenvolvimento, pode utilizar a extensão Live Server no VS Code.
 
-## 🚧 Status
-**Projeto acadêmico em evolução.**
+## Status
 
-Novos ajustes visuais e funcionais podem ser realizados conforme os estudos avançam.
+Projeto acadêmico em evolução. A implementação é um site front-end estático; não há backend ou persistência de dados documentados neste repositório.
